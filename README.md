@@ -2,9 +2,11 @@
 
 이 프로젝트는 **마이스터넷(https://meister.hrdkorea.or.kr) 사이트에서 IT 네트워크 시스템 직종의 질의 데이터를 자동으로 크롤링하여 Discord 서버에 알림을 보내주는 봇**입니다.  
 또한 간단한 **슬래시 명령어(Slash Command)** 기능도 제공하여, 무작위 지역 추첨이나 봇의 업타임 확인이 가능합니다.
+
+---
+
 ![Python Version](https://img.shields.io/badge/Python-3.9+%2B-blue?logo=python)
 ![License](https://img.shields.io/badge/License-Apache%202.0-green)
----
 
 ## 기능
 
