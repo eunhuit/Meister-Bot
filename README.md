@@ -5,7 +5,7 @@
 
 ---
 
-![Python Version](https://img.shields.io/badge/Python-3.9+%2B-blue?logo=python)
+![Python Version](https://img.shields.io/badge/Python-3.9%2B-blue?logo=python)
 ![License](https://img.shields.io/badge/License-Apache%202.0-green)
 
 ## 기능
