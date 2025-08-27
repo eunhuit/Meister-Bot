@@ -33,4 +33,40 @@ git clone https://github.com/your-repo/meisternet-discord-bot.git
 cd meisternet-discord-bot
 ```
 
-### 2. 
+### 2. 필요 라이브러리 설치
+```bash
+pip install -r requirements.txt
+```
+
+### 3. ChromeDriver 설치
+./chromedriver-win64/chromedriver.exe 경로에 크롬드라이버를 두어야 합니다.
+[Download](https://storage.googleapis.com/chrome-for-testing-public/139.0.7258.154/win64/chromedriver-win64.zip)
+
+### 4. Global 변수 설정
+- `UR_ID` -> 마이스터넷 ID
+- `UR_PW` -> 마이스터넷 PW
+- `UR_PASSCODE` -> 마이스터넷 2차인증 생년월일
+- `UR_TOKEN` -> Discord 봇 토큰
+- `UR_CHANNEL_ID` -> 알림을 보낼 Discord 채널 ID
+- `UR_ROLE_ID` -> 멘션할 Discord 역할 ID
+
+### 5. 실행
+```bash
+run.bat
+```
+
+## 프로젝트 구조
+```bash
+.
+├── bot.py               # 메인 실행 파일 (크롤링 + Discord 알림)
+├── data.csv             # 이전 데이터 저장 파일
+├── chromedriver-win64/  # 크롬 드라이버 위치
+└── README.md            # 설명 문서
+```
+
+## 사용된 기술
+* Python 3.9+
+* Selenium (웹 크롤링)
+* Discord.py (디스코드 봇)
+* CSV (데이터 관리)
+* asyncio (비동기 실행)
