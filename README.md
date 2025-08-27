@@ -73,3 +73,7 @@ run.bat
 * Discord.py (디스코드 봇)
 * CSV (데이터 관리)
 * asyncio (비동기 실행)
+
+---
+
+Apache2.0 &copy; [eunhuit](https://www.github.com/eunhuit)
