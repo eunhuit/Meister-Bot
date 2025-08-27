@@ -76,4 +76,4 @@ run.bat
 
 ---
 
-Apache2.0 &copy; [eunhuit](https://www.github.com/eunhuit)
+Apache 2.0 &copy; [eunhuit](https://www.github.com/eunhuit)
