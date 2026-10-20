@@ -4,6 +4,5 @@ __pycache__/
 data.csv
 bot_status.json
 bot_status.json.tmp
-monitoring_data.json
 chromedriver-win64/
 .env

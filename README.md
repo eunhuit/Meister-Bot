@@ -25,8 +25,6 @@
 - `/안녕` → 봇이 인사
 - `/1과제`, `/2과제`, `/3과제` → 무작위 시/도 추첨
 - `/업타임` → 봇이 켜져 있는 시간 표시
-- `/순위` → 직종별 최종 순위 및 입상 결과 (점수 자동계산기 `monitoring_data.json` 연동)
-- `/결과` → 수상 결과 표시
 - `/디데이`, `/지방대회`, `/전국대회` → 기능경기대회까지 남은 날짜 표시
 
 ### 4. D-Day 알림 (V2)
@@ -63,7 +61,6 @@ pip install -r requirements.txt
 - `UR_USER_ID` -> 멘션할 Discord 사용자 ID
 - `TARGET_COMPET_CODE`, `TARGET_JOB_CODE` -> 대회/직종 코드 (`main.py`)
 - `DDAY_CHANNEL_ID` -> D-Day 알림을 보낼 Discord 채널 ID (`sub.py`)
-- `MONITORING_JSON_PATH` -> 점수 자동계산기 `monitoring_data.json` 경로 (`sub.py`)
 
 ### 5. 실행
 ```bash
