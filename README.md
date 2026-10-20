@@ -25,6 +25,14 @@
 - `/안녕` → 봇이 인사
 - `/1과제`, `/2과제`, `/3과제` → 무작위 시/도 추첨
 - `/업타임` → 봇이 켜져 있는 시간 표시
+- `/순위` → 직종별 최종 순위 및 입상 결과 (점수 자동계산기 `monitoring_data.json` 연동)
+- `/결과` → 수상 결과 표시
+- `/디데이`, `/지방대회`, `/전국대회` → 기능경기대회까지 남은 날짜 표시
+
+### 4. D-Day 알림 (V2)
+- 지방대회 D-100부터 D-DAY까지 매일 09:00(KST) D-Day 알림 전송
+- `python sub.py --test-dday` 로 기동 직후 테스트 알림 전송
+- 30초마다 `bot_status.json` 하트비트 기록
 
 ---
 
@@ -32,8 +40,8 @@
 
 ### 1. 저장소 클론
 ```bash
-git clone https://github.com/your-repo/meisternet-discord-bot.git
-cd meisternet-discord-bot
+git clone https://github.com/eunhuit/Meister-Bot.git
+cd Meister-Bot
 ```
 
 ### 2. 필요 라이브러리 설치
@@ -52,6 +60,10 @@ pip install -r requirements.txt
 - `UR_TOKEN` -> Discord 봇 토큰
 - `UR_CHANNEL_ID` -> 알림을 보낼 Discord 채널 ID
 - `UR_ROLE_ID` -> 멘션할 Discord 역할 ID
+- `UR_USER_ID` -> 멘션할 Discord 사용자 ID
+- `TARGET_COMPET_CODE`, `TARGET_JOB_CODE` -> 대회/직종 코드 (`main.py`)
+- `DDAY_CHANNEL_ID` -> D-Day 알림을 보낼 Discord 채널 ID (`sub.py`)
+- `MONITORING_JSON_PATH` -> 점수 자동계산기 `monitoring_data.json` 경로 (`sub.py`)
 
 ### 5. 실행
 ```bash
@@ -61,8 +73,10 @@ run.bat
 ## 프로젝트 구조
 ```bash
 .
-├── bot.py               # 메인 실행 파일 (크롤링 + Discord 알림)
-├── data.csv             # 이전 데이터 저장 파일
+├── main.py              # 크롤링 + Discord 알림 (run.bat 으로 10분마다 실행)
+├── sub.py               # 슬래시 명령어 + D-Day 알림 봇
+├── run.bat              # main.py 반복 실행 스크립트
+├── data.csv             # 이전 데이터 저장 파일 (자동 생성)
 ├── chromedriver-win64/  # 크롬 드라이버 위치
 └── README.md            # 설명 문서
 ```
